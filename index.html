@@ -8,6 +8,7 @@
 <body>
   <h1>BMI値を計算してみよう</h1>
   <p>BMI = 体重（kg）÷身長（m）×身長（m）</p>
+  <!-- 体重と身長を入力する -->
   <form name="bmi">
     体重：<input type="text" name="weight">kg<br>
     身長：<input type="text" name="height">cm<br>
@@ -16,9 +17,11 @@
   </form>
   <script>
     function calcBMI() {
+      //計算をする
       var w = document.bmi.weight.value;
       var h = (document.bmi.height.value) / 100;
       var bmi = w / ( h * h );
+      //計算結果を表示する
       document.bmi.answer.value = bmi;
       if ( bmi < 18.5 ) {
         alert('あなたは痩せ気味です。');
