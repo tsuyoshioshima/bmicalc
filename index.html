@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI計算</title>
+</head>
+<body>
+  <h1>BMI値を計算してみよう</h1>
+  <p>BMI = 体重（kg）÷身長（m）×身長（m）</p>
+  <form name="bmi">
+    体重：<input type="text" name="weight">kg<br>
+    身長：<input type="text" name="height">cm<br>
+    <input type="button" value="計算" onclick="calcBMI()"><br>
+    結果：<input type="text" name="answer">
+  </form>
+  <script>
+    function calcBMI() {
+      var w = document.bmi.weight.value;
+      var h = (document.bmi.height.value) / 100;
+      var bmi = w / ( h * h );
+      document.bmi.answer.value = bmi;
+      if ( bmi < 18.5 ) {
+        alert('あなたは痩せ気味です。');
+      } else if ( 18.5 <= bmi && bmi < 25 ){
+        alert('あなたは普通体重です。');
+      } else {
+        alert('あなたは肥満気味です。');
+      }
+    }
+  </script>
+</body>
+</html>
