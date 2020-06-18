@@ -2,18 +2,16 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BMI計算</title>
 </head>
 <body>
   <h1>BMI値を計算してみよう</h1>
   <p>BMI = 体重（kg）÷身長（m）×身長（m）</p>
-  <!-- 体重と身長を入力する -->
   <form name="bmi">
-    体重：<input type="text" name="weight">kg<br>
-    身長：<input type="text" name="height">cm<br>
+    <p>体重：<input type="text" name="weight">kg</p>
+    <p>身長：<input type="text" name="height">cm</p>
     <input type="button" value="計算" onclick="calcBMI()"><br>
-    結果：<input type="text" name="answer">
+    <p>結果：<input type="text" name="answer"></p>
   </form>
   <script>
     function calcBMI() {
